@@ -15,15 +15,6 @@ public class CheckingAccount {
         return validateElevenTest(counterAccount, amount);
     }
 
-    public void addInterest() {
-        Money interest = balance.multiply(INTEREST_PERCENTAGE);
-        if (interest.greaterThan(0)) {
-            balance.add(interest);
-        } else {
-            balance.substract(interest);
-        }
-    }
-
     private Transfer validateElevenTest (String counterAccount, Money amount) throws BusinessException {
       // 2. Assuming result is 9-digit bank account number, validate 11-test:
       int sum = 0;
